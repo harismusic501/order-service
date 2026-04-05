@@ -1,0 +1,8 @@
+app:
+  message: ${APP_MESSAGE:default-message}
+
+db:
+  url: ${DB_URL:default-db}
+
+server:
+  port: 8080

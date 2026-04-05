@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: order-service
+  tag: v1
+  pullPolicy: Never  # use local Docker Desktop image
+
+service:
+  port: 80
+
+env:
+  APP_MESSAGE: "Hello from DEV"
+  DB_URL: "jdbc:mysql://dev-db:3306/order"

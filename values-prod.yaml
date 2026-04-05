@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: order-service
+  tag: v1
+  pullPolicy: Always
+
+service:
+  port: 80
+
+env:
+  APP_MESSAGE: "Hello from PROD"
+  DB_URL: "jdbc:mysql://prod-db:3306/order"
