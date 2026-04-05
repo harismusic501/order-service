@@ -14,6 +14,19 @@ pipeline {
 
   stages {
 
+    stage('Install Helm') {
+      steps {
+        sh """
+          if ! command -v helm &> /dev/null; then
+            echo "Helm not found, installing..."
+            curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+          else
+            echo "Helm already installed: \$(helm version --short)"
+          fi
+        """
+      }
+    }
+
     stage('Checkout App Repo') {
       steps {
         // Jenkins checks out this repo automatically via 'checkout scm'
