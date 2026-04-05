@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    maven 'Maven3'
+  }
+
   environment {
     HELM_REPO_URL = 'https://github.com/harismusic501/helm-template-repo.git'
     IMAGE_NAME    = 'order-service'
