@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    HELM_REPO_URL = 'https://bitbucket.org/your-org/helm-template-repo.git'
+    HELM_REPO_URL = 'https://github.com/harismusic501/helm-template-repo.git'
     IMAGE_NAME    = 'order-service'
     IMAGE_TAG     = 'v1'
     NAMESPACE     = 'dev'
